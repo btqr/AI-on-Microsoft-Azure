@@ -1,6 +1,6 @@
 # Azure Bot Service i QnA Maker
 
-Azure Bot Service oraz QnA Maker to usługi pozwalająca nam na tworzenie inteligentnych botów klasy korporacyjnej. Można z ich pomocą stworzyć dowolnego bota np. wirtualnego asystenta który poprawi jakość dostarczanych usług oraz zautomatyzuje nasze procesy biznesowe.
+Azure Bot Service oraz QnA Maker to usługi pozwalające nam na tworzenie inteligentnych botów klasy korporacyjnej. Można z ich pomocą stworzyć dowolnego bota np. wirtualnego asystenta który poprawi jakość dostarczanych usług oraz zautomatyzuje nasze procesy biznesowe.
 
 ### 1. Intro
    #### 1.1. Przedstawienie oraz usługi serwisu
