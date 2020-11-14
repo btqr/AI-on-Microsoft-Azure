@@ -1,0 +1,8 @@
+{
+    "$kind": "Microsoft.MultiLanguageRecognizer",
+    "id": "LUIS_BuyComputer",
+    "recognizers": {
+        "en-us": "BuyComputer.en-us.lu",
+        "": "BuyComputer.en-us.lu"
+    }
+}

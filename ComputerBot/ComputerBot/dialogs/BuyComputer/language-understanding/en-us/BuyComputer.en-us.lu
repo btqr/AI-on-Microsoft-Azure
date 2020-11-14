@@ -1,0 +1,82 @@
+
+
+
+# TextInput_Response_TQa5XC
+- The code is: {orderCode=ERC2354X}
+- {orderCode=JFI124Z}
+- Code is {orderCode=POJ211A}
+- Ok, {orderCode=PLZ992D}
+- The code of the set is {orderCode=YOI888L}
+- Ok, code is {orderCode=IOP954D}
+- The code is: {orderCode}
+- The code of the set is {orderCode}
+- Code of the set is {orderCode}
+- Code is {orderCode}
+- {orderCode}
+- Ok, code is {orderCode}
+- Code {orderCode}
+
+@ ml orderCode
+
+# TextInput_Response_19Qb0c
+- My surname is {user.surname=Krolak} 
+- Surname is {user.surname=Krolak} 
+- {user.surname=Bartek}
+
+@ ml user.surname
+# TextInput_Response_HPGiVc
+- My number is {user.phone=48555666777} 
+- My phone number is {user.phone=48555666777} 
+- Number is {user.phone=48555666777} 
+- {user.phone=48555666777}
+- My number is {user.phone} 
+- My phone number is {user.phone} 
+- Number is {user.phone} 
+- {user.phone}
+
+@ ml user.phone
+
+# TextInput_Response_0njohZ
+- The city is {user.city=Warszawa} 
+- City is {user.city=Warszawa} 
+- {user.city=Warszawa} 
+- City {user.city=Warszawa} 
+
+@ ml user.city
+
+# TextInput_Response_2dyVE7
+- Street is {user.street=Dover Street 20} 
+- The Street is {user.street=Dover Street 20} 
+- {user.street=Dover Street 20}
+- The street with the house number is {user.street=Dover Street 20}
+- Street {user.street=Dover Street 20}
+- Street with the house number {user.street=Dover Street 20}
+
+@ ml user.street
+
+
+# TextInput_Response_Npvj1f
+- Zipcode is {user.zipcode=05300} 
+- My zipcode is {user.zipcode=05300} 
+- Zipcode {user.zipcode=05300} 
+- {user.zipcode=05300}
+- Zipcode is {user.zipcode} 
+- My zipcode is {user.zipcode} 
+- Zipcode {user.zipcode} 
+- {user.zipcode}
+
+@ ml user.zipcode
+
+# TextInput_Response_fLQPD7
+- My email is {user.email=bisk0poczta.onet.pl} 
+- Email is {user.email=bisk0poczta.onet.pl} 
+- {user.email=bisk0poczta.onet.pl}
+
+@ ml user.email
+
+# TextInput_Response_QfmqOt
+- My name is {user.name=Bartek}
+- Name is {user.name=Bartek}
+- {user.name=Bartek}
+
+@ ml user.name

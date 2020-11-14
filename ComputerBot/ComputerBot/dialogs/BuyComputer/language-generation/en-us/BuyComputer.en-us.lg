@@ -1,0 +1,118 @@
+[import](common.lg)
+
+# TextInput_Prompt_TQa5XC()
+- I see. \n Can you please provide me a code of the computer set so I will know exactly what set have you chosen?
+
+# TextInput_UnrecognizedPrompt_TQa5XC()
+- Sorry, I cannot recognize the code. The ordering of the computer is canceled. You can try again or call directly to our seller +48567432112.
+# SendActivity_KGhTQt()
+- You didn't confirm the dialog. Order placing is canceled. Please try again or call to our seller directly by phone.
+# TextInput_InvalidPrompt_CMIfAl()
+- Unrecozgonized name. You have to write only your name like 'Alexandra'. Please, try again.
+# TextInput_UnrecognizedPrompt_CMIfAl()
+- Sorry, I cannot recognize your name. The ordering of the computer is canceled. You can try again or call directly to our seller.
+# TextInput_InvalidPrompt_19Qb0c()
+- Unrecozgonized surname. You have to write only your surname like 'Johnson'. Please, try again.
+# TextInput_UnrecognizedPrompt_19Qb0c()
+- Sorry, I cannot recognize your surname. The ordering of the computer is canceled. You can try again or call directly to our seller.
+# TextInput_Prompt_L0nu4Z()
+- Unrecozgonized email. You have to write only your email like 'bisk0@gmail.com'. Please, try again.
+# TextInput_Prompt_HPGiVc()
+- What is your phone number? Please, write your phone number (without any signs) like '45505999879'.
+# TextInput_UnrecognizedPrompt_HPGiVc()
+- Sorry, I cannot recognize your mobile phone number. The ordering of the computer is canceled. You can try again or call directly to our seller.
+# TextInput_Prompt_0njohZ()
+- What is the city of the destination?
+# TextInput_UnrecognizedPrompt_0njohZ()
+- What is the zipcode of the city? Please provide zipcode without any signs i.e. if the zip code is 00-340 write 'Zip code is 00340'.
+# TextInput_InvalidPrompt_0njohZ()
+- Unrecozgonized city. Please try again. 
+# TextInput_InvalidPrompt_ab2e4u()
+- Unrecozgonized zipcode. Please try again. Make sure the length of the zipcode is 5.
+# TextInput_Prompt_2dyVE7()
+- What is the street with the home number? Please provide the street with the home number like 'Dover Street 17/32'.
+# TextInput_UnrecognizedPrompt_2dyVE7()
+- Sorry, I cannot recognize the street. The ordering of the computer is canceled. You can try again or call directly to our seller.
+# TextInput_InvalidPrompt_2dyVE7()
+- Unrecozgonized street. Please try again.
+# ConfirmInput_Prompt_q5DWFQ()
+- Summary of ther order: \n Code of the computer set: ${dialog.orderCode} \n Computer set description: blabla \n Name: ${dialog.user.name} \n Surname: ${dialog.user.surname} \n Email: ${dialog.user.email} \n Mobile phone number: ${dialog.user.phone} \n Adress of delivery: ${dialog.user.city} ${dialog.user.zipcode}, ${dialog.user.street} \n \n If the following data is correct you can continue and the order will be placed. Summary of the order will be also sent to your email. In case some data is incorrect then please do not confirm this dialog and try to order a computer set again.
+
+# SendActivity_ZHCSX7()
+- Order was placed. More details were send to you by email. Thank you for choosing our store and we recommend ourseleves for the future.
+# ConfirmInput_Prompt_vtNd9K()
+- ```
+Currently the only option to pay is to pay on delivery. To order this computer set you will have to prodive me the following data: 
+    -Your name and surname 
+    -Your email 
+    -Your mobile phone number 
+    -Address of the delivery(city, street, zipcode). 
+    
+Do you want to proceed?
+```
+
+
+
+
+
+# ConfirmInput_Prompt_ABEoFq()
+- ``` The code given by you is **${dialog.orderCode}**. 
+	The set with that code contains: 
+		Processor: ${dialog.pc.spec.content.processor} 
+		RAM: ${dialog.pc.spec.content.ram} 
+		Graphic card: ${dialog.pc.spec.content.graphicCard} 
+
+The total cost of the set is ${dialog.pc.spec.content.cost}$. Can you confirm that is the set you want to buy?
+```
+If the following data is correct you can continue and the order will be placed. Summary of the order will be also sent to your email. 
+In case some data is incorrect then please do not confirm this dialog and try to order a computer set again.
+ ```
+# SendActivity_j0Ftbp()
+- Order was placed. More details were send to you by email. Thank you for choosing our store and we recommend ourseleves for the future.
+# TextInput_Prompt_Npvj1f()
+- What is the zipcode of the city? Please provide zipcode without any signs i.e. if the zip code is 00-340 write 'Zip code is 00340'.
+# TextInput_UnrecognizedPrompt_Npvj1f()
+- Sorry, I cannot recognize the zipcode. The ordering of the computer is canceled. You can try again or call directly to our seller.
+# TextInput_InvalidPrompt_Npvj1f()
+- Unrecozgonized zipcode. Please try again. Make sure the length of the zipcode is 5.
+# TextInput_Prompt_fLQPD7()
+- What is your email?
+# TextInput_UnrecognizedPrompt_fLQPD7()
+- Sorry, I cannot recognize your email The ordering of the computer is canceled. You can try again or call directly to our seller.
+# TextInput_InvalidPrompt_fLQPD7()
+- Unrecozgonized email. You have to write only your email like 'bisk0@gmail.com'. Please, try again.
+# TextInput_Prompt_QfmqOt()
+- What is your name?
+# TextInput_UnrecognizedPrompt_QfmqOt()
+- Sorry, I cannot recognize your name. The ordering of the computer is canceled. You can try again or call directly to our seller..
+# TextInput_InvalidPrompt_QfmqOt()
+- Unrecozgonized name. You have to write only your name like 'Alexandra'. Please, try again.
+# TextInput_Prompt_19Qb0c()
+- What is your surname?
+# SendActivity_H9lNSi()
+- You didn't confirm the dialog. Order placing is canceled. Please try again or call to our seller directly by phone.
+# TextInput_InvalidPrompt_HPGiVc()
+- Unrecozgonized phone number. Please try again. 
+# TextInput_InvalidPrompt_TQa5XC()
+- Unrecozgnized computer set code. Please, try again.
+# SendActivity_KHF0f9()
+- Sorry, we don't have computer set with provided code ${dialog.orderCode}. Ordering process is canceled. Please, try to order again.
+# ConfirmInput_Prompt_fZJMmo()
+
+- ``` Summary of ther order: 
+	Code of the computer set: ${dialog.orderCode} 
+	Processor: ${dialog.pc.spec.content.processor} 
+	RAM: ${dialog.pc.spec.content.ram} 
+	Graphic card: ${dialog.pc.spec.content.graphicCard} 
+
+	Name: ${dialog.user.name} 
+	Surname: ${dialog.user.surname} 
+	Email: ${dialog.user.email} 
+	Mobile phone number: ${dialog.user.phone} 
+	Adress of the delivery: ${dialog.user.city} ${dialog.user.zipcode}, ${dialog.user.street} 
+
+	The total cost of the set is ${dialog.pc.spec.content.cost}. 
+
+If the following data is correct you can continue and the order will be placed. Summary of the order will be also sent to your email. 
+In case if some data is incorrect then please do not confirm this dialog and try to order a computer set again.
+```

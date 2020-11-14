@@ -1,0 +1,85 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "$designer": {
+      "name": "ComputerBot",
+      "description": "",
+      "id": "Fs4wwy"
+    }
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnUnknownIntent",
+      "$designer": {
+        "id": "xKWGac"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "X1vPRv"
+          },
+          "activity": "${SendActivity_X1vPRv()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "uJ0dfU",
+        "name": "ComputerBuy"
+      },
+      "intent": "ComputerBuy",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "ZZcSp6"
+          },
+          "activityProcessed": true,
+          "dialog": "BuyComputer"
+        }
+      ],
+      "condition": "#ComputerBuy.Score > 0.6"
+    },
+    {
+      "$kind": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "uiZy4v"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "t0iVam"
+          },
+          "activity": "${SendActivity_t0iVam()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "6pOaVN",
+        "name": "Help"
+      },
+      "intent": "Help",
+      "condition": "#Help.Score > 0.6",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "P1niJj"
+          },
+          "activity": "${SendActivity_P1niJj()}"
+        }
+      ]
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
+  "generator": "computerbot.lg",
+  "id": "ComputerBot",
+  "recognizer": "computerbot.lu.qna"
+}

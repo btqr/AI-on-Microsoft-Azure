@@ -1,0 +1,325 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "sCAvBj",
+    "name": "BuyComputer",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "jaXNgc"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "TQa5XC"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "prompt": "${TextInput_Prompt_TQa5XC()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_TQa5XC()}",
+          "invalidPrompt": "${TextInput_InvalidPrompt_TQa5XC()}",
+          "defaultValueResponse": "",
+          "value": "=coalesce(@orderCode, $orderCode)",
+          "property": "dialog.orderCode",
+          "allowInterruptions": false,
+          "validations": [
+            "length(this.value) == 7"
+          ]
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "qbLD7R"
+          },
+          "method": "POST",
+          "resultProperty": "dialog.pc.spec",
+          "url": "https://computer-shop-api-mock.azurewebsites.net/code",
+          "headers": {},
+          "responseType": "json",
+          "body": "${dialog.orderCode}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "LhOvaa"
+          },
+          "condition": "dialog.pc.spec != null",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "KHF0f9"
+              },
+              "activity": "${SendActivity_KHF0f9()}"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "VYP0I0"
+              }
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "ABEoFq"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ConfirmInput_Prompt_ABEoFq()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "dialog.setConfirmed"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "IOYjIp"
+          },
+          "condition": "dialog.setConfirmed == true",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "KGhTQt"
+              },
+              "activity": "${SendActivity_KGhTQt()}"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "8NqL1e"
+              }
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "vtNd9K"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ConfirmInput_Prompt_vtNd9K()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "dialog.provideDataConfirmed"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "BZvIOT"
+          },
+          "condition": "dialog.provideDataConfirmed == true",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "H9lNSi"
+              },
+              "activity": "${SendActivity_H9lNSi()}"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "ndLpV1"
+              }
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "QfmqOt"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_QfmqOt()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_QfmqOt()}",
+          "invalidPrompt": "${TextInput_InvalidPrompt_QfmqOt()}",
+          "defaultValueResponse": "",
+          "property": "dialog.user.name"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "19Qb0c"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_19Qb0c()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_19Qb0c()}",
+          "invalidPrompt": "${TextInput_InvalidPrompt_19Qb0c()}",
+          "defaultValueResponse": "",
+          "property": "dialog.user.surname",
+          "validations": []
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "fLQPD7"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_fLQPD7()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_fLQPD7()}",
+          "invalidPrompt": "${TextInput_InvalidPrompt_fLQPD7()}",
+          "defaultValueResponse": "",
+          "property": "dialog.user.email"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "HPGiVc"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_HPGiVc()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_HPGiVc()}",
+          "invalidPrompt": "${TextInput_InvalidPrompt_HPGiVc()}",
+          "defaultValueResponse": "",
+          "property": "dialog.user.phone",
+          "validations": [
+            "length(this.value) == 11"
+          ]
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "0njohZ"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_0njohZ()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_0njohZ()}",
+          "invalidPrompt": "${TextInput_InvalidPrompt_0njohZ()}",
+          "defaultValueResponse": "",
+          "property": "dialog.user.city"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "Npvj1f"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_Npvj1f()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_Npvj1f()}",
+          "invalidPrompt": "${TextInput_InvalidPrompt_Npvj1f()}",
+          "defaultValueResponse": "",
+          "property": "dialog.user.zipcode",
+          "validations": [
+            "length(this.value) == 5"
+          ]
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "2dyVE7"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_2dyVE7()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_2dyVE7()}",
+          "invalidPrompt": "${TextInput_InvalidPrompt_2dyVE7()}",
+          "defaultValueResponse": "",
+          "property": "dialog.user.street"
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "fZJMmo"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "dialog.orderConfirmed",
+          "prompt": "${ConfirmInput_Prompt_fZJMmo()}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "gwzGYc"
+          },
+          "condition": "dialog.orderConfirmed == true",
+          "actions": [
+            {
+              "$kind": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "fuHGfl"
+              },
+              "method": "POST",
+              "url": "https://computer-shop-api-mock.azurewebsites.net/mail",
+              "body": "{     \"computerCode\":\"${dialog.orderCode}\",     \"processor\":\"${dialog.pc.spec.content.processor}\",     \"graphicCard\":\"${dialog.pc.spec.content.graphicCard}\",     \"ram\":\"${dialog.pc.spec.content.ram}\",\t\"name\":\"${dialog.user.name}\",     \"surname\":\"${dialog.user.surname}\",     \"email\":\"${dialog.user.email}\",     \"phoneNumber\":\"${dialog.user.phone}\",     \"adress\":\"${dialog.user.city} ${dialog.user.zipcode}, ${dialog.user.street}\",     \"cost\":${dialog.pc.spec.content.cost} }"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "j0Ftbp"
+              },
+              "activity": "${SendActivity_j0Ftbp()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "BuyComputer.lg",
+  "recognizer": "BuyComputer.lu.qna",
+  "id": "BuyComputer"
+}
