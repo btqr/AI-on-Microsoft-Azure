@@ -18,7 +18,7 @@ Computer bot to bot komputerowy, który pomaga nam złożyć zamówienie zestawu
 
 ## Architektura bota
 
-![alt text](Architecture.png "Architektura bota")
+![Architektura bota](./Architecture.PNG)
 
 ## Zreprodukowanie bota
 
