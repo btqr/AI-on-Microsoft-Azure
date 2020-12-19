@@ -1,4 +1,4 @@
 {
-    "PREDICTION_URL": "https://covid-mask-recognizer.cognitiveservices.azure.com/customvision/v3.0/Prediction/872484af-303b-42e1-bbab-87489a652a97/classify/iterations/Iteration1/image",
-    "PREDICTION_KEY": "f893883520b94a2cac57169cd8f33573"
+    "PREDICTION_URL": "YOUR_URL_THERE",
+    "PREDICTION_KEY": "YOUR_KEY_THERE"
 }
